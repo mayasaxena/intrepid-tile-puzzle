@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TPViewController : UIViewController
+@interface TPPuzzleViewController : UIViewController
+
+@property NSInteger size;
+
+- (instancetype)initWithSize:(NSInteger)size;
 
 @end

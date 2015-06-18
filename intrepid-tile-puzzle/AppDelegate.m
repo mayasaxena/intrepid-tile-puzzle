@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "TPViewController.h"
+#import "TPPuzzleViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[TPViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = [[TPPuzzleViewController alloc] initWithSize:3];
     [self.window makeKeyAndVisible];
     return YES;
 }
