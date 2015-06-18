@@ -14,6 +14,7 @@
 		A5615B521B3312790044D0BF /* intrepid_tile_puzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B511B3312790044D0BF /* intrepid_tile_puzzleTests.m */; };
 		A5615B5E1B3312F30044D0BF /* TPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B5C1B3312F30044D0BF /* TPViewController.m */; };
 		A5615B5F1B3312F30044D0BF /* TPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5615B5D1B3312F30044D0BF /* TPViewController.xib */; };
+		A5615B621B3319D50044D0BF /* TileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B611B3319D50044D0BF /* TileButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		A5615B5B1B3312F30044D0BF /* TPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPViewController.h; sourceTree = "<group>"; };
 		A5615B5C1B3312F30044D0BF /* TPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPViewController.m; sourceTree = "<group>"; };
 		A5615B5D1B3312F30044D0BF /* TPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPViewController.xib; sourceTree = "<group>"; };
+		A5615B601B3319D50044D0BF /* TileButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileButton.h; sourceTree = "<group>"; };
+		A5615B611B3319D50044D0BF /* TileButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				A5615B5B1B3312F30044D0BF /* TPViewController.h */,
 				A5615B5C1B3312F30044D0BF /* TPViewController.m */,
 				A5615B5D1B3312F30044D0BF /* TPViewController.xib */,
+				A5615B601B3319D50044D0BF /* TileButton.h */,
+				A5615B611B3319D50044D0BF /* TileButton.m */,
 			);
 			path = "intrepid-tile-puzzle";
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5615B5E1B3312F30044D0BF /* TPViewController.m in Sources */,
+				A5615B621B3319D50044D0BF /* TileButton.m in Sources */,
 				A5615B3B1B3312790044D0BF /* AppDelegate.m in Sources */,
 				A5615B381B3312790044D0BF /* main.m in Sources */,
 			);

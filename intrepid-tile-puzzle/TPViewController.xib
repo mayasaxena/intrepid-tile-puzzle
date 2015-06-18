@@ -1,19 +1,145 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D2134" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TPViewController">
             <connections>
+                <outlet property="emptyTile" destination="0Ne-do-BeQ" id="dSB-Ii-Tte"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="tiles" destination="igy-kE-iUP" id="wf1-SO-tyu"/>
+                <outletCollection property="tiles" destination="UBr-pb-uek" id="7hF-u3-mNN"/>
+                <outletCollection property="tiles" destination="1Vq-SQ-pUO" id="AfT-lB-DH2"/>
+                <outletCollection property="tiles" destination="m3j-5X-Qdi" id="kwp-8q-hTN"/>
+                <outletCollection property="tiles" destination="uvT-Js-OFE" id="7fq-fZ-FXw"/>
+                <outletCollection property="tiles" destination="6tH-DO-Wj6" id="a2X-hv-S8w"/>
+                <outletCollection property="tiles" destination="zel-DW-cGE" id="zKv-6I-RHW"/>
+                <outletCollection property="tiles" destination="KEa-GJ-h1F" id="vYH-QZ-6sH"/>
+                <outletCollection property="tiles" destination="0Ne-do-BeQ" id="ktc-dW-Ynt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Cd8-gD-rPd">
+                    <rect key="frame" x="150" y="150" width="300" height="300"/>
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igy-kE-iUP" userLabel="1">
+                            <rect key="frame" x="2" y="2" width="96" height="96"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="1">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tileTapped:" destination="-1" eventType="touchUpInside" id="P0Q-MS-HUz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBr-pb-uek" userLabel="2">
+                            <rect key="frame" x="102" y="2" width="96" height="96"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <inset key="contentEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                            <state key="normal" title="2">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tileTapped:" destination="-1" eventType="touchUpInside" id="PrL-ig-imF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vq-SQ-pUO" userLabel="3">
+                            <rect key="frame" x="202" y="2" width="96" height="96"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="3">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tileTapped:" destination="-1" eventType="touchUpInside" id="aKg-83-dLi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3j-5X-Qdi" userLabel="4">
+                            <rect key="frame" x="2" y="102" width="96" height="96"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="4">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tileTapped:" destination="-1" eventType="touchUpInside" id="3qf-tB-SKh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvT-Js-OFE" userLabel="5">
+                            <rect key="frame" x="102" y="102" width="96" height="96"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="5">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tileTapped:" destination="-1" eventType="touchUpInside" id="nnY-u5-uLV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="6" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tH-DO-Wj6" userLabel="6">
+                            <rect key="frame" x="202" y="102" width="96" height="96"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="6">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tileTapped:" destination="-1" eventType="touchUpInside" id="fqe-IT-9Q1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zel-DW-cGE" userLabel="7">
+                            <rect key="frame" x="2" y="202" width="96" height="96"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="7">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tileTapped:" destination="-1" eventType="touchUpInside" id="iZP-Az-o6a"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" tag="9" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ne-do-BeQ" userLabel="9">
+                            <rect key="frame" x="202" y="202" width="96" height="96"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="9">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tileTapped:" destination="-1" eventType="touchUpInside" id="cRo-A6-3m7"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEa-GJ-h1F" userLabel="8">
+                            <rect key="frame" x="102" y="202" width="96" height="96"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="8">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tileTapped:" destination="-1" eventType="touchUpInside" id="IFH-4B-B0U"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.84705882349999995" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="esB-U4-F3p"/>
+                        <constraint firstAttribute="width" constant="300" id="qdr-re-dPb"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="Cd8-gD-rPd" secondAttribute="centerX" id="Ibo-sK-J5C"/>
+                <constraint firstAttribute="centerY" secondItem="Cd8-gD-rPd" secondAttribute="centerY" id="bgb-vV-HhM"/>
+            </constraints>
         </view>
     </objects>
 </document>

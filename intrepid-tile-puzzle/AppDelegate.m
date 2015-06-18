@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TPViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[TPViewController alloc] initWithNibName:nil bundle:nil];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
