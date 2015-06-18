@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TPViewController.h
 //  intrepid-tile-puzzle
 //
 //  Created by Maya Saxena on 6/18/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TPViewController : UIViewController
 
 @end
-

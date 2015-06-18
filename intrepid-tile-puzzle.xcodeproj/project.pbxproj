@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		A5615B381B3312790044D0BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B371B3312790044D0BF /* main.m */; };
 		A5615B3B1B3312790044D0BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B3A1B3312790044D0BF /* AppDelegate.m */; };
-		A5615B3E1B3312790044D0BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B3D1B3312790044D0BF /* ViewController.m */; };
-		A5615B411B3312790044D0BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5615B3F1B3312790044D0BF /* Main.storyboard */; };
 		A5615B431B3312790044D0BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5615B421B3312790044D0BF /* Images.xcassets */; };
 		A5615B461B3312790044D0BF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5615B441B3312790044D0BF /* LaunchScreen.xib */; };
 		A5615B521B3312790044D0BF /* intrepid_tile_puzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B511B3312790044D0BF /* intrepid_tile_puzzleTests.m */; };
+		A5615B5E1B3312F30044D0BF /* TPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B5C1B3312F30044D0BF /* TPViewController.m */; };
+		A5615B5F1B3312F30044D0BF /* TPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5615B5D1B3312F30044D0BF /* TPViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		A5615B371B3312790044D0BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A5615B391B3312790044D0BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5615B3A1B3312790044D0BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A5615B3C1B3312790044D0BF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A5615B3D1B3312790044D0BF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A5615B401B3312790044D0BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5615B421B3312790044D0BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A5615B451B3312790044D0BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A5615B4B1B3312790044D0BF /* intrepid-tile-puzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "intrepid-tile-puzzleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5615B501B3312790044D0BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5615B511B3312790044D0BF /* intrepid_tile_puzzleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = intrepid_tile_puzzleTests.m; sourceTree = "<group>"; };
+		A5615B5B1B3312F30044D0BF /* TPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPViewController.h; sourceTree = "<group>"; };
+		A5615B5C1B3312F30044D0BF /* TPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPViewController.m; sourceTree = "<group>"; };
+		A5615B5D1B3312F30044D0BF /* TPViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +83,12 @@
 			children = (
 				A5615B391B3312790044D0BF /* AppDelegate.h */,
 				A5615B3A1B3312790044D0BF /* AppDelegate.m */,
-				A5615B3C1B3312790044D0BF /* ViewController.h */,
-				A5615B3D1B3312790044D0BF /* ViewController.m */,
-				A5615B3F1B3312790044D0BF /* Main.storyboard */,
 				A5615B421B3312790044D0BF /* Images.xcassets */,
 				A5615B441B3312790044D0BF /* LaunchScreen.xib */,
 				A5615B351B3312790044D0BF /* Supporting Files */,
+				A5615B5B1B3312F30044D0BF /* TPViewController.h */,
+				A5615B5C1B3312F30044D0BF /* TPViewController.m */,
+				A5615B5D1B3312F30044D0BF /* TPViewController.xib */,
 			);
 			path = "intrepid-tile-puzzle";
 			sourceTree = "<group>";
@@ -199,9 +199,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5615B411B3312790044D0BF /* Main.storyboard in Resources */,
 				A5615B461B3312790044D0BF /* LaunchScreen.xib in Resources */,
 				A5615B431B3312790044D0BF /* Images.xcassets in Resources */,
+				A5615B5F1B3312F30044D0BF /* TPViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5615B3E1B3312790044D0BF /* ViewController.m in Sources */,
+				A5615B5E1B3312F30044D0BF /* TPViewController.m in Sources */,
 				A5615B3B1B3312790044D0BF /* AppDelegate.m in Sources */,
 				A5615B381B3312790044D0BF /* main.m in Sources */,
 			);
@@ -244,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A5615B3F1B3312790044D0BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5615B401B3312790044D0BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A5615B441B3312790044D0BF /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
