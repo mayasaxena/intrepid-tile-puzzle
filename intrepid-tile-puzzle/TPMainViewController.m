@@ -59,14 +59,14 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     self.chosenImage = self.puzzleImages[indexPath.row];
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-    cell.backgroundView.alpha = .7;
+    cell.backgroundView.layer.borderWidth = 4.0;
+    cell.backgroundView.layer.borderColor = [[UIColor colorWithRed:0 green:0.847 blue:0.816 alpha:1] CGColor]; /*#00d8d0*/
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     self.chosenImage = nil;
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     cell.backgroundView.layer.borderWidth = 0;
-    cell.backgroundView.alpha = 1;
 }
 
 @end
