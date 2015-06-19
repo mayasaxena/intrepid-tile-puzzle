@@ -119,6 +119,8 @@ static const CGFloat TileSlideAnimationTime = 0.25;
 }
 
 
+#pragma mark - Button Action Methods
+
 - (void) tileTapped:(UIButton *)sender {
     self.isPlaying = YES;
     if (!self.isSolved) {

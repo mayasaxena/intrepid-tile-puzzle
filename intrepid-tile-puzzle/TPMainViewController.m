@@ -43,6 +43,9 @@
     [self.navigationController pushViewController:self.puzzleViewController animated:NO];
 }
 
+
+#pragma mark - Collection View Delegate and Data Source Methods
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [self.puzzleImages count];
 }
