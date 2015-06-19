@@ -15,8 +15,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVe-4A-yAH">
-                    <rect key="frame" x="285" y="235" width="30" height="30"/>
-                    <state key="normal" title="3x3">
+                    <rect key="frame" x="270" y="235" width="61" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="61" id="E7Q-2P-QfA"/>
+                    </constraints>
+                    <state key="normal" title="Easy">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -24,8 +27,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwc-3g-stV">
-                    <rect key="frame" x="285" y="302" width="30" height="30"/>
-                    <state key="normal" title="4x4">
+                    <rect key="frame" x="267" y="297" width="66" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="66" id="Oz3-dI-aH3"/>
+                    </constraints>
+                    <state key="normal" title="Medium">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -33,8 +39,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAP-ES-jHY">
-                    <rect key="frame" x="285" y="363" width="30" height="30"/>
-                    <state key="normal" title="5x5">
+                    <rect key="frame" x="278" y="363" width="45" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="4wI-Rd-dau"/>
+                    </constraints>
+                    <state key="normal" title="Hard">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -44,12 +53,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="Jwc-3g-stV" secondAttribute="centerX" id="8Sw-K4-8cp"/>
-                <constraint firstAttribute="centerX" secondItem="GVe-4A-yAH" secondAttribute="centerX" id="CrW-u4-Myw"/>
-                <constraint firstItem="Jwc-3g-stV" firstAttribute="top" secondItem="GVe-4A-yAH" secondAttribute="bottom" constant="37" id="UX1-py-xHC"/>
-                <constraint firstItem="IAP-ES-jHY" firstAttribute="top" secondItem="Jwc-3g-stV" secondAttribute="bottom" constant="31" id="WeF-Ha-LFM"/>
-                <constraint firstAttribute="centerX" secondItem="IAP-ES-jHY" secondAttribute="centerX" id="wNT-bd-Y9e"/>
-                <constraint firstItem="GVe-4A-yAH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="235" id="xQj-X2-hay"/>
+                <constraint firstItem="GVe-4A-yAH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="235" id="1x1-rs-8Sp"/>
+                <constraint firstItem="Jwc-3g-stV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Xj-eq-ftT"/>
+                <constraint firstItem="GVe-4A-yAH" firstAttribute="centerX" secondItem="Jwc-3g-stV" secondAttribute="centerX" id="Ebk-01-WGp"/>
+                <constraint firstItem="IAP-ES-jHY" firstAttribute="top" secondItem="Jwc-3g-stV" secondAttribute="bottom" constant="36" id="Q59-9u-he0"/>
+                <constraint firstItem="IAP-ES-jHY" firstAttribute="centerX" secondItem="Jwc-3g-stV" secondAttribute="centerX" id="ebY-dV-ytg"/>
+                <constraint firstItem="Jwc-3g-stV" firstAttribute="top" secondItem="GVe-4A-yAH" secondAttribute="bottom" constant="32" id="kJ5-bo-fwL"/>
             </constraints>
         </view>
     </objects>

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51990181B34917E00E1738D /* nebula.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A51990171B34917E00E1738D /* nebula.jpg */; };
+		A519901D1B34954100E1738D /* panda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A51990191B34954100E1738D /* panda.jpg */; };
+		A519901E1B34954100E1738D /* snowleopard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A519901A1B34954100E1738D /* snowleopard.jpg */; };
+		A519901F1B34954100E1738D /* tiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A519901B1B34954100E1738D /* tiger.jpg */; };
+		A51990201B34954100E1738D /* yosemite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A519901C1B34954100E1738D /* yosemite.jpg */; };
 		A5615B381B3312790044D0BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B371B3312790044D0BF /* main.m */; };
 		A5615B3B1B3312790044D0BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B3A1B3312790044D0BF /* AppDelegate.m */; };
 		A5615B431B3312790044D0BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5615B421B3312790044D0BF /* Images.xcassets */; };
@@ -30,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A51990171B34917E00E1738D /* nebula.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nebula.jpg; sourceTree = "<group>"; };
+		A51990191B34954100E1738D /* panda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panda.jpg; sourceTree = "<group>"; };
+		A519901A1B34954100E1738D /* snowleopard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowleopard.jpg; sourceTree = "<group>"; };
+		A519901B1B34954100E1738D /* tiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tiger.jpg; sourceTree = "<group>"; };
+		A519901C1B34954100E1738D /* yosemite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yosemite.jpg; sourceTree = "<group>"; };
 		A5615B321B3312790044D0BF /* intrepid-tile-puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "intrepid-tile-puzzle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5615B361B3312790044D0BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5615B371B3312790044D0BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,10 +99,15 @@
 		A5615B341B3312790044D0BF /* intrepid-tile-puzzle */ = {
 			isa = PBXGroup;
 			children = (
+				A51990191B34954100E1738D /* panda.jpg */,
+				A519901A1B34954100E1738D /* snowleopard.jpg */,
+				A519901B1B34954100E1738D /* tiger.jpg */,
+				A519901C1B34954100E1738D /* yosemite.jpg */,
 				A5615B391B3312790044D0BF /* AppDelegate.h */,
 				A5615B3A1B3312790044D0BF /* AppDelegate.m */,
 				A5F0561D1B345D5D009A18BA /* TPMainViewController.h */,
 				A5F0561E1B345D5D009A18BA /* TPMainViewController.m */,
+				A51990171B34917E00E1738D /* nebula.jpg */,
 				A5F0561F1B345D5D009A18BA /* TPMainViewController.xib */,
 				A5615B421B3312790044D0BF /* Images.xcassets */,
 				A5615B441B3312790044D0BF /* LaunchScreen.xib */,
@@ -213,8 +228,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5615B461B3312790044D0BF /* LaunchScreen.xib in Resources */,
+				A51990181B34917E00E1738D /* nebula.jpg in Resources */,
+				A519901D1B34954100E1738D /* panda.jpg in Resources */,
+				A519901F1B34954100E1738D /* tiger.jpg in Resources */,
 				A5F056211B345D5D009A18BA /* TPMainViewController.xib in Resources */,
 				A5615B431B3312790044D0BF /* Images.xcassets in Resources */,
+				A519901E1B34954100E1738D /* snowleopard.jpg in Resources */,
+				A51990201B34954100E1738D /* yosemite.jpg in Resources */,
 				A5615B5F1B3312F30044D0BF /* TPPuzzleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

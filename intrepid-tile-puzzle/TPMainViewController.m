@@ -29,7 +29,7 @@
 }
 
 - (void) choosePuzzleWithSize:(long) size {
-    self.puzzleViewController = [[TPPuzzleViewController alloc] initWithSize:size];
+    self.puzzleViewController = [[TPPuzzleViewController alloc] initWithSize:size andImage:[UIImage imageNamed:@"nebula.jpg"]];
     [self.navigationController pushViewController:self.puzzleViewController animated:YES];
 }
 

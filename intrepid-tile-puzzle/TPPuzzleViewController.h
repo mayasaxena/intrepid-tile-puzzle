@@ -12,6 +12,6 @@
 
 @property NSInteger size;
 
-- (instancetype)initWithSize:(NSInteger)size;
+- (instancetype)initWithSize:(NSInteger)size andImage:(UIImage *)image;
 
 @end

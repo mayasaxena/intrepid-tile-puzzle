@@ -16,6 +16,7 @@ static const CGFloat TileSlideAnimationTime = 0.25;
 @property (weak, nonatomic) UIButton *emptyTile;
 @property (weak, nonatomic) IBOutlet UIView *puzzleView;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong, nonatomic) UIImage *puzzleImage;
 
 
 @property BOOL isSolved;
@@ -29,7 +30,7 @@ static const CGFloat TileSlideAnimationTime = 0.25;
 @implementation TPPuzzleViewController
 
 
-- (instancetype)initWithSize:(NSInteger)size
+- (instancetype)initWithSize:(NSInteger)size andImage:(UIImage *)image
 {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
@@ -39,6 +40,7 @@ static const CGFloat TileSlideAnimationTime = 0.25;
         self.tileStartCenter = self.tileSpacing / 2;
         self.tileCount = size * size;
         self.isPlaying = NO;
+        self.puzzleImage = image;
         
     }
     return self;
@@ -73,14 +75,21 @@ static const CGFloat TileSlideAnimationTime = 0.25;
             UIButton *newTile = [UIButton buttonWithType:UIButtonTypeCustom];
             newTile.frame = CGRectMake(x, y, self.tileSpacing - 4, self.tileSpacing - 4);
             newTile.backgroundColor = [UIColor whiteColor];
-            newTile.layer.cornerRadius = 10;
+            newTile.layer.cornerRadius = 5;
             [newTile addTarget:self action:@selector(tileTapped:) forControlEvents:UIControlEventTouchUpInside];
             newTile.tag = currentTileIndex + 1;
             [newTile setTitle:[NSString stringWithFormat:@"%ld", (long)newTile.tag] forState:UIControlStateNormal];
             [newTile setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             newTile.enabled = NO;
+            newTile.adjustsImageWhenDisabled = NO;
             [self.puzzleView addSubview:newTile];
             [self.tiles addObject:newTile];
+            CGRect imgFrame = CGRectMake(x, y, self.tileSpacing - 4, self.tileSpacing - 4);
+            CGImageRef imageRef = CGImageCreateWithImageInRect([self.puzzleImage CGImage], imgFrame);
+            UIImage* subImage = [UIImage imageWithCGImage: imageRef];
+            [newTile setBackgroundImage:subImage forState:UIControlStateNormal];
+            newTile.clipsToBounds = YES;
+            CGImageRelease(imageRef);
             currentTileIndex++;
         }
     }
