@@ -13,11 +13,13 @@ static const CGFloat TileSlideAnimationTime = 0.25;
 
 @interface TPPuzzleViewController ()
 @property (strong, nonatomic) NSMutableArray *tiles;
-@property (weak, nonatomic) IBOutlet UIButton *emptyTile;
+@property (weak, nonatomic) UIButton *emptyTile;
 @property (weak, nonatomic) IBOutlet UIView *puzzleView;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 
 @property BOOL isSolved;
+@property BOOL isPlaying;
 @property float tileSpacing;
 @property float tileStartCenter;
 @property long tileCount;
@@ -51,13 +53,17 @@ static const CGFloat TileSlideAnimationTime = 0.25;
     int currentIndex = 0;
     for (int y = 2; y <= 300; y+= self.tileSpacing) {
         for (int x = 2; x <= 300; x+= self.tileSpacing) {
-            UIButton *newTile = [UIButton buttonWithType:UIButtonTypeSystem];
+            UIButton *newTile = [UIButton buttonWithType:UIButtonTypeCustom];
             newTile.frame = CGRectMake(x, y, self.tileSpacing - 4, self.tileSpacing - 4);
             newTile.backgroundColor = [UIColor whiteColor];
             newTile.layer.cornerRadius = 10;
             [newTile addTarget:self action:@selector(tileTapped:) forControlEvents:UIControlEventTouchUpInside];
             newTile.tag = currentIndex + 1;
             [newTile setTitle:[NSString stringWithFormat:@"%ld", (long)newTile.tag] forState:UIControlStateNormal];
+            [newTile setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [newTile setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
+            [newTile setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+            newTile.enabled = NO;
             [self.puzzleView addSubview:newTile];
             [self.tiles addObject:newTile];
             currentIndex++;
@@ -65,12 +71,25 @@ static const CGFloat TileSlideAnimationTime = 0.25;
     }
     
     self.emptyTile = [self.tiles lastObject];
-    self.emptyTile.hidden = YES;
+    self.emptyTile.hidden = NO;
+    self.isPlaying = NO;
     
     
-    [UIView animateWithDuration:TileSlideAnimationTime delay:3.0 options:UIViewAnimationOptionTransitionNone animations:^{
+    [UIView animateWithDuration:0.5 delay:2.0 options:UIViewAnimationOptionTransitionNone animations:^{
         [self shuffleTapped:nil];
-    } completion:nil];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.5 delay:2.0 options:UIViewAnimationOptionTransitionNone animations:^{
+                self.statusLabel.text = @"Set...";
+                self.emptyTile.alpha = 0;
+        } completion:^(BOOL finished) {
+            self.statusLabel.text = @"GO!";
+            self.emptyTile.hidden = YES;
+            self.emptyTile.alpha = 1;
+            for (UIButton *tile in self.tiles) {
+                tile.enabled = YES;
+            }
+        }];
+    }];
     
 }
 
@@ -79,6 +98,7 @@ static const CGFloat TileSlideAnimationTime = 0.25;
 }
 
 - (IBAction)tileTapped:(UIButton *)sender {
+    self.isPlaying = YES;
     if (!self.isSolved) {
         CGRect newFrame = [self getAdjacentEmptyLocationForTile:sender];
         if (!CGRectIsNull(newFrame)) {
@@ -89,6 +109,7 @@ static const CGFloat TileSlideAnimationTime = 0.25;
                 if ([self puzzleSolved]) {
                     self.emptyTile.hidden = NO;
                     self.isSolved = YES;
+                    self.isPlaying = NO;
                     [self alertPuzzleSolved];
                 }
             }];
@@ -98,8 +119,6 @@ static const CGFloat TileSlideAnimationTime = 0.25;
 }
 
 - (IBAction)resetTapped:(UIButton *)sender {
-    
-    //    [UIView animateWithDuration:1.0 animations:^{
     int currentTileIndex = 0;
     for (int y = self.tileStartCenter; y <= 300; y+= self.tileSpacing) {
         for (int x = self.tileStartCenter; x <= 300; x+= self.tileSpacing) {
@@ -108,9 +127,6 @@ static const CGFloat TileSlideAnimationTime = 0.25;
         }
     }
     self.emptyTile.hidden = YES;
-    
-    
-    //    }];
     
     
 }
@@ -124,7 +140,9 @@ static const CGFloat TileSlideAnimationTime = 0.25;
         }
     }
     self.isSolved = NO;
-    self.emptyTile.hidden = YES;
+    if (self.isPlaying) {
+        self.emptyTile.hidden = YES;
+    }
     
 }
 
@@ -136,6 +154,7 @@ static const CGFloat TileSlideAnimationTime = 0.25;
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Play Again"
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
+                                                              self.isPlaying = YES;
                                                               [self shuffleTapped:nil];
                                                           }];
     [alert addAction:defaultAction];

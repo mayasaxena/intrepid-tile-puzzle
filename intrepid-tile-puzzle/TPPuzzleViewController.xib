@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TPPuzzleViewController">
             <connections>
                 <outlet property="puzzleView" destination="Cd8-gD-rPd" id="AYj-yj-s2q"/>
+                <outlet property="statusLabel" destination="uaK-gO-gq5" id="Vsy-Ol-6hf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,8 +25,8 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2y-dC-aLJ">
-                    <rect key="frame" x="256" y="530" width="89" height="30"/>
-                    <state key="normal" title="Reset Puzzle">
+                    <rect key="frame" x="256" y="530" width="88" height="30"/>
+                    <state key="normal" title="Solve Puzzle">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -41,6 +42,12 @@
                         <action selector="shuffleTapped:" destination="-1" eventType="touchUpInside" id="WWd-8M-f6D"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-gO-gq5">
+                    <rect key="frame" x="269" y="79" width="62" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -48,8 +55,10 @@
                 <constraint firstAttribute="centerX" secondItem="Cd8-gD-rPd" secondAttribute="centerX" id="Ibo-sK-J5C"/>
                 <constraint firstAttribute="centerX" secondItem="e2y-dC-aLJ" secondAttribute="centerX" id="TTZ-MY-atI"/>
                 <constraint firstAttribute="centerY" secondItem="Cd8-gD-rPd" secondAttribute="centerY" id="bgb-vV-HhM"/>
+                <constraint firstAttribute="centerX" secondItem="uaK-gO-gq5" secondAttribute="centerX" id="elw-O9-QCh"/>
                 <constraint firstAttribute="centerX" secondItem="hDV-8f-5fR" secondAttribute="centerX" id="gl2-9y-vrN"/>
                 <constraint firstAttribute="bottom" secondItem="e2y-dC-aLJ" secondAttribute="bottom" constant="40" id="iq5-m5-eXx"/>
+                <constraint firstItem="Cd8-gD-rPd" firstAttribute="top" secondItem="uaK-gO-gq5" secondAttribute="bottom" constant="50" id="wGx-ln-gkk"/>
             </constraints>
         </view>
     </objects>

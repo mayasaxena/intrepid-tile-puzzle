@@ -8,10 +8,11 @@
 
 #import "AppDelegate.h"
 #import "TPPuzzleViewController.h"
+#import "TPMainViewController.h"
 
 @interface AppDelegate ()
 
-@property (strong, nonatomic) TPPuzzleViewController *mainViewController;
+@property (strong, nonatomic) TPMainViewController *mainViewController;
 
 @end
 
@@ -20,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.mainViewController = [[TPPuzzleViewController alloc] initWithSize:3];
+    self.mainViewController = [[TPMainViewController alloc] initWithNibName:nil bundle:nil];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];

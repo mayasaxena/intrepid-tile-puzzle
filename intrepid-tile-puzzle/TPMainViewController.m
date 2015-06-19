@@ -7,8 +7,11 @@
 //
 
 #import "TPMainViewController.h"
+#import "TPPuzzleViewController.h"
 
 @interface TPMainViewController ()
+
+@property (strong, nonatomic) TPPuzzleViewController *puzzleViewController;
 
 @end
 
@@ -16,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Puzzle Game";
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -24,14 +28,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) choosePuzzleWithSize:(long) size {
+    self.puzzleViewController = [[TPPuzzleViewController alloc] initWithSize:size];
+    [self.navigationController pushViewController:self.puzzleViewController animated:YES];
 }
-*/
+
+
+- (IBAction)tappedPuzzleSize:(UIButton *)sender {
+    
+    [self choosePuzzleWithSize:sender.tag];
+}
 
 @end
