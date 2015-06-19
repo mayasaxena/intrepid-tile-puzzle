@@ -11,6 +11,8 @@
 
 @interface AppDelegate ()
 
+@property (strong, nonatomic) TPPuzzleViewController *mainViewController;
+
 @end
 
 @implementation AppDelegate
@@ -18,7 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[TPPuzzleViewController alloc] initWithSize:3];
+    self.mainViewController = [[TPPuzzleViewController alloc] initWithSize:3];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

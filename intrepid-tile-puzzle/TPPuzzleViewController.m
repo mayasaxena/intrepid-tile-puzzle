@@ -12,14 +12,15 @@
 static const CGFloat TileSlideAnimationTime = 0.25;
 
 @interface TPPuzzleViewController ()
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *tiles;
+@property (strong, nonatomic) NSMutableArray *tiles;
 @property (weak, nonatomic) IBOutlet UIButton *emptyTile;
+@property (weak, nonatomic) IBOutlet UIView *puzzleView;
 
 
 @property BOOL isSolved;
 @property float tileSpacing;
 @property float tileStartCenter;
-@property float tileCount;
+@property long tileCount;
 
 @end
 
@@ -41,13 +42,31 @@ static const CGFloat TileSlideAnimationTime = 0.25;
 }
 
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tiles = [[NSMutableArray alloc]init];
     
-    
-    for (UIButton *tile in self.tiles) {
-        tile.layer.cornerRadius = 10;
+    int currentIndex = 0;
+    for (int y = 2; y <= 300; y+= self.tileSpacing) {
+        for (int x = 2; x <= 300; x+= self.tileSpacing) {
+            UIButton *newTile = [UIButton buttonWithType:UIButtonTypeSystem];
+            newTile.frame = CGRectMake(x, y, self.tileSpacing - 4, self.tileSpacing - 4);
+            newTile.backgroundColor = [UIColor whiteColor];
+            newTile.layer.cornerRadius = 10;
+            [newTile addTarget:self action:@selector(tileTapped:) forControlEvents:UIControlEventTouchUpInside];
+            newTile.tag = currentIndex + 1;
+            [newTile setTitle:[NSString stringWithFormat:@"%ld", (long)newTile.tag] forState:UIControlStateNormal];
+            [self.puzzleView addSubview:newTile];
+            [self.tiles addObject:newTile];
+            currentIndex++;
+        }
     }
+    
+    self.emptyTile = [self.tiles lastObject];
+    self.emptyTile.hidden = YES;
+    
     
     [UIView animateWithDuration:TileSlideAnimationTime delay:3.0 options:UIViewAnimationOptionTransitionNone animations:^{
         [self shuffleTapped:nil];
@@ -89,6 +108,7 @@ static const CGFloat TileSlideAnimationTime = 0.25;
         }
     }
     self.emptyTile.hidden = YES;
+    
     
     //    }];
     

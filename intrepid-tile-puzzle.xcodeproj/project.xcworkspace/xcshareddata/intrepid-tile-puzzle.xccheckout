@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>CB649AA1-4118-4114-98B5-EAF007524F31</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>intrepid-tile-puzzle</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8323EA91529C16D57551EE7334260A71273765E7</key>
 		<string>https://github.com/mayasaxena/intrepid-tile-puzzle.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>intrepid-tile-puzzle.xcodeproj/project.xcworkspace</string>
+	<string>intrepid-tile-puzzle.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8323EA91529C16D57551EE7334260A71273765E7</key>

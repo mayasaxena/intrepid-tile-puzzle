@@ -15,6 +15,8 @@
 		A5615B5E1B3312F30044D0BF /* TPPuzzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B5C1B3312F30044D0BF /* TPPuzzleViewController.m */; };
 		A5615B5F1B3312F30044D0BF /* TPPuzzleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5615B5D1B3312F30044D0BF /* TPPuzzleViewController.xib */; };
 		A5615B621B3319D50044D0BF /* TileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B611B3319D50044D0BF /* TileButton.m */; };
+		A5F056201B345D5D009A18BA /* TPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F0561E1B345D5D009A18BA /* TPMainViewController.m */; };
+		A5F056211B345D5D009A18BA /* TPMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F0561F1B345D5D009A18BA /* TPMainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		A5615B5D1B3312F30044D0BF /* TPPuzzleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPPuzzleViewController.xib; sourceTree = "<group>"; };
 		A5615B601B3319D50044D0BF /* TileButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileButton.h; sourceTree = "<group>"; };
 		A5615B611B3319D50044D0BF /* TileButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileButton.m; sourceTree = "<group>"; };
+		A5F0561D1B345D5D009A18BA /* TPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMainViewController.h; sourceTree = "<group>"; };
+		A5F0561E1B345D5D009A18BA /* TPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMainViewController.m; sourceTree = "<group>"; };
+		A5F0561F1B345D5D009A18BA /* TPMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPMainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,9 @@
 			children = (
 				A5615B391B3312790044D0BF /* AppDelegate.h */,
 				A5615B3A1B3312790044D0BF /* AppDelegate.m */,
+				A5F0561D1B345D5D009A18BA /* TPMainViewController.h */,
+				A5F0561E1B345D5D009A18BA /* TPMainViewController.m */,
+				A5F0561F1B345D5D009A18BA /* TPMainViewController.xib */,
 				A5615B421B3312790044D0BF /* Images.xcassets */,
 				A5615B441B3312790044D0BF /* LaunchScreen.xib */,
 				A5615B351B3312790044D0BF /* Supporting Files */,
@@ -205,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5615B461B3312790044D0BF /* LaunchScreen.xib in Resources */,
+				A5F056211B345D5D009A18BA /* TPMainViewController.xib in Resources */,
 				A5615B431B3312790044D0BF /* Images.xcassets in Resources */,
 				A5615B5F1B3312F30044D0BF /* TPPuzzleViewController.xib in Resources */,
 			);
@@ -224,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F056201B345D5D009A18BA /* TPMainViewController.m in Sources */,
 				A5615B5E1B3312F30044D0BF /* TPPuzzleViewController.m in Sources */,
 				A5615B621B3319D50044D0BF /* TileButton.m in Sources */,
 				A5615B3B1B3312790044D0BF /* AppDelegate.m in Sources */,
@@ -416,6 +426,7 @@
 				A5615B571B3312790044D0BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5615B581B3312790044D0BF /* Build configuration list for PBXNativeTarget "intrepid-tile-puzzleTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +435,7 @@
 				A5615B5A1B3312790044D0BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
