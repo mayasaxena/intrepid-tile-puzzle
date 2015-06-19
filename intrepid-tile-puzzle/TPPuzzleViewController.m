@@ -78,7 +78,10 @@ static const CGFloat TileSlideAnimationTime = 0.25;
             newTile.layer.cornerRadius = 5;
             [newTile addTarget:self action:@selector(tileTapped:) forControlEvents:UIControlEventTouchUpInside];
             newTile.tag = currentTileIndex + 1;
-            [newTile setTitle:[NSString stringWithFormat:@"%ld", (long)newTile.tag] forState:UIControlStateNormal];
+            if (self.puzzleImage == nil) {
+                
+                [newTile setTitle:[NSString stringWithFormat:@"%ld", (long)newTile.tag] forState:UIControlStateNormal];
+            }
             [newTile setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             newTile.enabled = NO;
             newTile.adjustsImageWhenDisabled = NO;

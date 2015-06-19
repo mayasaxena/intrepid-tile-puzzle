@@ -9,10 +9,12 @@
 #import "TPMainViewController.h"
 #import "TPPuzzleViewController.h"
 
-@interface TPMainViewController ()
+@interface TPMainViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) TPPuzzleViewController *puzzleViewController;
-
+@property (strong, nonatomic) NSArray *puzzleImages;
+@property (weak, nonatomic) IBOutlet UICollectionView *imagesCollectionView;
+@property (strong, nonatomic) UIImage *chosenImage;
 @end
 
 @implementation TPMainViewController
@@ -20,7 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Puzzle Game";
-    // Do any additional setup after loading the view from its nib.
+    self.puzzleImages = [NSArray arrayWithObjects:[UIImage imageNamed:@"nebula.jpg"],
+                                                  [UIImage imageNamed:@"panda.jpg"],
+                                                  [UIImage imageNamed:@"snowleopard.jpg"],
+                                                  [UIImage imageNamed:@"tiger.jpg"],
+                                                  [UIImage imageNamed:@"flower.jpg"],
+                                                  [UIImage imageNamed:@"yosemite.jpg"], nil];
+    self.imagesCollectionView.backgroundColor = [UIColor whiteColor];
+    UINib *cellNib = [UINib nibWithNibName:@"PuzzleImageCell" bundle:nil];
+    [self.imagesCollectionView registerNib:cellNib forCellWithReuseIdentifier:@"PuzzleImageCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,7 +39,7 @@
 }
 
 - (void) choosePuzzleWithSize:(long) size {
-    self.puzzleViewController = [[TPPuzzleViewController alloc] initWithSize:size andImage:[UIImage imageNamed:@"nebula.jpg"]];
+    self.puzzleViewController = [[TPPuzzleViewController alloc] initWithSize:size andImage:self.chosenImage];
     [self.navigationController pushViewController:self.puzzleViewController animated:YES];
 }
 
@@ -37,6 +47,26 @@
 - (IBAction)tappedPuzzleSize:(UIButton *)sender {
     
     [self choosePuzzleWithSize:sender.tag];
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [self.puzzleImages count];
+}
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PuzzleImageCell" forIndexPath:indexPath];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:self.puzzleImages[indexPath.row]];
+    cell.backgroundView = backgroundView;
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.chosenImage = self.puzzleImages[indexPath.row];
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+//    UICollectionViewCell *cell = [self collectionView:self.imagesCollectionView cellForItemAtIndexPath:indexPath];
+    cell.backgroundView.layer.borderWidth = 5.0;
+    cell.backgroundView.layer.borderColor = [[UIColor blueColor] CGColor];
 }
 
 @end

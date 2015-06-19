@@ -12,6 +12,8 @@
 		A519901E1B34954100E1738D /* snowleopard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A519901A1B34954100E1738D /* snowleopard.jpg */; };
 		A519901F1B34954100E1738D /* tiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A519901B1B34954100E1738D /* tiger.jpg */; };
 		A51990201B34954100E1738D /* yosemite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A519901C1B34954100E1738D /* yosemite.jpg */; };
+		A51990231B3496F900E1738D /* PuzzleImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51990221B3496F900E1738D /* PuzzleImageCell.xib */; };
+		A51990251B349C7800E1738D /* flower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A51990241B349C7800E1738D /* flower.jpg */; };
 		A5615B381B3312790044D0BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B371B3312790044D0BF /* main.m */; };
 		A5615B3B1B3312790044D0BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B3A1B3312790044D0BF /* AppDelegate.m */; };
 		A5615B431B3312790044D0BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5615B421B3312790044D0BF /* Images.xcassets */; };
@@ -19,7 +21,6 @@
 		A5615B521B3312790044D0BF /* intrepid_tile_puzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B511B3312790044D0BF /* intrepid_tile_puzzleTests.m */; };
 		A5615B5E1B3312F30044D0BF /* TPPuzzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B5C1B3312F30044D0BF /* TPPuzzleViewController.m */; };
 		A5615B5F1B3312F30044D0BF /* TPPuzzleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5615B5D1B3312F30044D0BF /* TPPuzzleViewController.xib */; };
-		A5615B621B3319D50044D0BF /* TileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A5615B611B3319D50044D0BF /* TileButton.m */; };
 		A5F056201B345D5D009A18BA /* TPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F0561E1B345D5D009A18BA /* TPMainViewController.m */; };
 		A5F056211B345D5D009A18BA /* TPMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F0561F1B345D5D009A18BA /* TPMainViewController.xib */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,8 @@
 		A519901A1B34954100E1738D /* snowleopard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowleopard.jpg; sourceTree = "<group>"; };
 		A519901B1B34954100E1738D /* tiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tiger.jpg; sourceTree = "<group>"; };
 		A519901C1B34954100E1738D /* yosemite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yosemite.jpg; sourceTree = "<group>"; };
+		A51990221B3496F900E1738D /* PuzzleImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PuzzleImageCell.xib; sourceTree = "<group>"; };
+		A51990241B349C7800E1738D /* flower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flower.jpg; sourceTree = "<group>"; };
 		A5615B321B3312790044D0BF /* intrepid-tile-puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "intrepid-tile-puzzle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5615B361B3312790044D0BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5615B371B3312790044D0BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,8 +56,6 @@
 		A5615B5B1B3312F30044D0BF /* TPPuzzleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPPuzzleViewController.h; sourceTree = "<group>"; };
 		A5615B5C1B3312F30044D0BF /* TPPuzzleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPPuzzleViewController.m; sourceTree = "<group>"; };
 		A5615B5D1B3312F30044D0BF /* TPPuzzleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPPuzzleViewController.xib; sourceTree = "<group>"; };
-		A5615B601B3319D50044D0BF /* TileButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileButton.h; sourceTree = "<group>"; };
-		A5615B611B3319D50044D0BF /* TileButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileButton.m; sourceTree = "<group>"; };
 		A5F0561D1B345D5D009A18BA /* TPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPMainViewController.h; sourceTree = "<group>"; };
 		A5F0561E1B345D5D009A18BA /* TPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPMainViewController.m; sourceTree = "<group>"; };
 		A5F0561F1B345D5D009A18BA /* TPMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TPMainViewController.xib; sourceTree = "<group>"; };
@@ -78,6 +79,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A51990211B34956200E1738D /* Background Images */ = {
+			isa = PBXGroup;
+			children = (
+				A51990241B349C7800E1738D /* flower.jpg */,
+				A51990191B34954100E1738D /* panda.jpg */,
+				A519901A1B34954100E1738D /* snowleopard.jpg */,
+				A519901B1B34954100E1738D /* tiger.jpg */,
+				A519901C1B34954100E1738D /* yosemite.jpg */,
+				A51990171B34917E00E1738D /* nebula.jpg */,
+			);
+			name = "Background Images";
+			sourceTree = "<group>";
+		};
 		A5615B291B3312790044D0BF = {
 			isa = PBXGroup;
 			children = (
@@ -99,24 +113,19 @@
 		A5615B341B3312790044D0BF /* intrepid-tile-puzzle */ = {
 			isa = PBXGroup;
 			children = (
-				A51990191B34954100E1738D /* panda.jpg */,
-				A519901A1B34954100E1738D /* snowleopard.jpg */,
-				A519901B1B34954100E1738D /* tiger.jpg */,
-				A519901C1B34954100E1738D /* yosemite.jpg */,
+				A51990211B34956200E1738D /* Background Images */,
 				A5615B391B3312790044D0BF /* AppDelegate.h */,
 				A5615B3A1B3312790044D0BF /* AppDelegate.m */,
 				A5F0561D1B345D5D009A18BA /* TPMainViewController.h */,
 				A5F0561E1B345D5D009A18BA /* TPMainViewController.m */,
-				A51990171B34917E00E1738D /* nebula.jpg */,
 				A5F0561F1B345D5D009A18BA /* TPMainViewController.xib */,
+				A51990221B3496F900E1738D /* PuzzleImageCell.xib */,
 				A5615B421B3312790044D0BF /* Images.xcassets */,
 				A5615B441B3312790044D0BF /* LaunchScreen.xib */,
 				A5615B351B3312790044D0BF /* Supporting Files */,
 				A5615B5B1B3312F30044D0BF /* TPPuzzleViewController.h */,
 				A5615B5C1B3312F30044D0BF /* TPPuzzleViewController.m */,
 				A5615B5D1B3312F30044D0BF /* TPPuzzleViewController.xib */,
-				A5615B601B3319D50044D0BF /* TileButton.h */,
-				A5615B611B3319D50044D0BF /* TileButton.m */,
 			);
 			path = "intrepid-tile-puzzle";
 			sourceTree = "<group>";
@@ -231,11 +240,13 @@
 				A51990181B34917E00E1738D /* nebula.jpg in Resources */,
 				A519901D1B34954100E1738D /* panda.jpg in Resources */,
 				A519901F1B34954100E1738D /* tiger.jpg in Resources */,
+				A51990251B349C7800E1738D /* flower.jpg in Resources */,
 				A5F056211B345D5D009A18BA /* TPMainViewController.xib in Resources */,
 				A5615B431B3312790044D0BF /* Images.xcassets in Resources */,
 				A519901E1B34954100E1738D /* snowleopard.jpg in Resources */,
 				A51990201B34954100E1738D /* yosemite.jpg in Resources */,
 				A5615B5F1B3312F30044D0BF /* TPPuzzleViewController.xib in Resources */,
+				A51990231B3496F900E1738D /* PuzzleImageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +266,6 @@
 			files = (
 				A5F056201B345D5D009A18BA /* TPMainViewController.m in Sources */,
 				A5615B5E1B3312F30044D0BF /* TPPuzzleViewController.m in Sources */,
-				A5615B621B3319D50044D0BF /* TileButton.m in Sources */,
 				A5615B3B1B3312790044D0BF /* AppDelegate.m in Sources */,
 				A5615B381B3312790044D0BF /* main.m in Sources */,
 			);
