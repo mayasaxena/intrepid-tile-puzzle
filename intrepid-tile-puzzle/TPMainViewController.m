@@ -33,20 +33,14 @@
     [self.imagesCollectionView registerNib:cellNib forCellWithReuseIdentifier:@"PuzzleImageCell"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (IBAction)tappedPuzzleSize:(UIButton *)sender {
+    [self choosePuzzleWithSize:sender.tag];
 }
 
 - (void) choosePuzzleWithSize:(long) size {
     self.puzzleViewController = [[TPPuzzleViewController alloc] initWithSize:size andImage:self.chosenImage];
-    [self.navigationController pushViewController:self.puzzleViewController animated:YES];
-}
-
-
-- (IBAction)tappedPuzzleSize:(UIButton *)sender {
-    
-    [self choosePuzzleWithSize:sender.tag];
+    [self.navigationController pushViewController:self.puzzleViewController animated:NO];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -58,15 +52,21 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PuzzleImageCell" forIndexPath:indexPath];
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:self.puzzleImages[indexPath.row]];
     cell.backgroundView = backgroundView;
+    
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     self.chosenImage = self.puzzleImages[indexPath.row];
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-//    UICollectionViewCell *cell = [self collectionView:self.imagesCollectionView cellForItemAtIndexPath:indexPath];
-    cell.backgroundView.layer.borderWidth = 5.0;
-    cell.backgroundView.layer.borderColor = [[UIColor blueColor] CGColor];
+    cell.backgroundView.alpha = .7;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.chosenImage = nil;
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    cell.backgroundView.layer.borderWidth = 0;
+    cell.backgroundView.alpha = 1;
 }
 
 @end

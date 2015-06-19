@@ -50,6 +50,7 @@ static const CGFloat TileSlideAnimationTime = 0.25;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.tiles = [[NSMutableArray alloc]init];
     
     [self configureButtons];
@@ -62,6 +63,7 @@ static const CGFloat TileSlideAnimationTime = 0.25;
 }
 
 - (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
     [self shuffleTapped:nil];
 }
 

@@ -20,11 +20,11 @@
                     <rect key="frame" x="150" y="150" width="300" height="300"/>
                     <color key="backgroundColor" red="0.0" green="0.84705882349999995" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="esB-U4-F3p"/>
-                        <constraint firstAttribute="width" constant="300" id="qdr-re-dPb"/>
+                        <constraint firstAttribute="width" constant="300" id="A4V-1N-Gn8"/>
+                        <constraint firstAttribute="height" constant="300" id="YbD-c6-2cQ"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2y-dC-aLJ">
+                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2y-dC-aLJ">
                     <rect key="frame" x="256" y="530" width="88" height="30"/>
                     <state key="normal" title="Solve Puzzle">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,16 +49,17 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="e2y-dC-aLJ" firstAttribute="top" secondItem="hDV-8f-5fR" secondAttribute="bottom" constant="8" id="5vO-M0-GJ1"/>
-                <constraint firstAttribute="centerX" secondItem="Cd8-gD-rPd" secondAttribute="centerX" id="Ibo-sK-J5C"/>
+                <constraint firstAttribute="centerX" secondItem="Cd8-gD-rPd" secondAttribute="centerX" id="8Ao-1g-zSH"/>
+                <constraint firstItem="Cd8-gD-rPd" firstAttribute="top" secondItem="uaK-gO-gq5" secondAttribute="bottom" constant="50" id="OcM-M7-MWz"/>
                 <constraint firstAttribute="centerX" secondItem="e2y-dC-aLJ" secondAttribute="centerX" id="TTZ-MY-atI"/>
-                <constraint firstAttribute="centerY" secondItem="Cd8-gD-rPd" secondAttribute="centerY" id="bgb-vV-HhM"/>
+                <constraint firstItem="uaK-gO-gq5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="79" id="VOM-4G-rZw"/>
                 <constraint firstAttribute="centerX" secondItem="uaK-gO-gq5" secondAttribute="centerX" id="elw-O9-QCh"/>
                 <constraint firstAttribute="centerX" secondItem="hDV-8f-5fR" secondAttribute="centerX" id="gl2-9y-vrN"/>
                 <constraint firstAttribute="bottom" secondItem="e2y-dC-aLJ" secondAttribute="bottom" constant="40" id="iq5-m5-eXx"/>
-                <constraint firstItem="Cd8-gD-rPd" firstAttribute="top" secondItem="uaK-gO-gq5" secondAttribute="bottom" constant="50" id="wGx-ln-gkk"/>
+                <constraint firstItem="hDV-8f-5fR" firstAttribute="top" secondItem="Cd8-gD-rPd" secondAttribute="bottom" constant="42" id="mhE-KX-fx2"/>
             </constraints>
         </view>
     </objects>
