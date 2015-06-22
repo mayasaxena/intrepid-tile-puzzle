@@ -40,7 +40,7 @@
 
 - (void) choosePuzzleWithSize:(long) size {
     self.puzzleViewController = [[TPPuzzleViewController alloc] initWithSize:size andImage:self.chosenImage];
-    [self.navigationController pushViewController:self.puzzleViewController animated:NO];
+    [self.navigationController pushViewController:self.puzzleViewController animated:YES];
 }
 
 

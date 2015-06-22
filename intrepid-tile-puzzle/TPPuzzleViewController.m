@@ -134,7 +134,8 @@ static const CGFloat TileSlideAnimationTime = 0.25;
                     self.emptyTile.hidden = NO;
                     self.isSolved = YES;
                     self.isPlaying = NO;
-                    [self alertPuzzleSolved];
+                    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(alertPuzzleSolved) userInfo:nil repeats:NO];
+//                    [self alertPuzzleSolved];
                 }
             }];
         }
@@ -181,7 +182,13 @@ static const CGFloat TileSlideAnimationTime = 0.25;
                                                               self.isPlaying = YES;
                                                               [self shuffleTapped:nil];
                                                           }];
+    UIAlertAction* backAction = [UIAlertAction actionWithTitle:@"Choose Another Puzzle"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              [self.navigationController popToRootViewControllerAnimated:YES];
+                                                          }];
     [alert addAction:defaultAction];
+    [alert addAction:backAction];
     [self presentViewController:alert animated:NO completion:nil];
 }
 
